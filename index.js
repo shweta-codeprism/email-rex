@@ -4,6 +4,10 @@ const puppeteer = require("puppeteer");
 const app = express();
 const port = process.env.PORT || 3030;
 
+app.get("/", (req, res) => {
+  res.end("It is working");
+});
+
 app.get("/image", async (req, res) => {
   const html = `<div style="width: 100px; height: 100px; background: red; display: flex; color: white;"> I m here </div>`;
 
